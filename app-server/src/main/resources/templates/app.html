@@ -1,0 +1,54 @@
+<!DOCTYPE html SYSTEM "http://www.thymeleaf.org/dtd/xhtml1-strict-thymeleaf-spring4-4.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+	<head>
+		<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title th:text="${title}">app title</title>
+		<script type="text/javascript" src="app/app.nocache.js"></script>
+		<!-- nicht retina iPhones -->
+		<link rel="apple-touch-icon" href="resources/appicons/appicon-57x57.png" sizes="57x57" />
+		<!-- nicht retina iPad -->
+		<link rel="apple-touch-icon" href="resources/appicons/appicon-72x72.png" sizes="72x72" />
+		<!-- nicht retina iPad mit iOS 7 -->
+		<link rel="apple-touch-icon" href="resources/appicons/appicon-76x76.png" sizes="76x76" />
+		<!-- retina iPhone vor iOS 7 -->
+		<link rel="apple-touch-icon" href="resources/appicons/appicon-114x114.png" sizes="114x114" />
+		<!-- retina iPhone mit iOS 7 -->
+		<link rel="apple-touch-icon" href="resources/appicons/appicon-120x120.png" sizes="120x120" />
+		<!-- retina iPad vor iOS 7 -->
+		<link rel="apple-touch-icon" href="resources/appicons/appicon-144x144.png" sizes="144x144" />
+		<!-- retina iPad mit iOS 7 -->
+		<link rel="apple-touch-icon" href="resources/appicons/appicon-152x152.png" sizes="152x152" />
+		<!--Android generell-->
+		<link rel="shortcut icon" href="resources/appicons/appicon-196x196.png" sizes="196x196" />
+		<!-- 	Da wir LayoutPanel verwenden erzeugt GWT ein leeres <div aria-hidden="true"...> mit unter anderem der Eigenschaft width:10cm;
+					Diese Eigenschaft verschiebt auf dem iPhone den Viewport sobald die Tastatur geöffnet wird und muss deshalb überschrieben werden -->
+		<style type="text/css">
+			div[aria-hidden="true"] {
+				width:0 !important;
+			}
+		</style>
+	</head>
+	<body>
+		<!-- RECOMMENDED if your web app will not function without JavaScript enabled -->
+		<noscript>
+			<div style="position:absolute;color: red; background-color: white; border: 1px solid red; padding: 4px;">
+				Im Browser muß JavaScript aktiviert sein, damit diese Anwendung richtig angezeigt wirde.
+			</div>
+		</noscript>
+		<script type="text/javascript">
+			var deviceID = null;
+		</script>
+		<!-- OPTIONAL: include this if you want history support for ie-->
+		<iframe src="javascript:''" id="__gwt_historyFrame" tabIndex='-1' style="position:absolute;width:0;height:0;border:0"></iframe>
+		<span id='loading' style="margin-left:10px;font-size:12px;padding:10px;font-family:Helvetica;background-color:#e5edf9;border:2px solid #96a2b5;">
+			loading...
+		</span>
+		<div style="display:none;">
+			<form action="javascript:;" method="post">
+				<input id="username_template" name="username" style="width:100%;"/>
+				<input id="password_template" name="password" type="password" style="width:100%;"/>
+			</form>
+		</div>
+	</body>
+</html>

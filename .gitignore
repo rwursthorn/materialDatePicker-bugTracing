@@ -1,0 +1,6 @@
+target
+.settings
+*.project
+*.classpath
+.springBeans
+/app-server/src/main/webapp/log
